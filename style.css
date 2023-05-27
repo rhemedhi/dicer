@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+:root {
+  --amaranth: rgb(244, 54, 76);
+  --brightRed: rgb(225, 6, 0);
+  --canaryYellow: rgb(255, 239, 0);
+  --dullYellow: rgb(255, 198, 0, 0.4);
+  --hunterBlaze: rgb(255, 130, 0);
+  --tileColor: rgb(255, 255, 255, 0.2);
+  --tile1Color: rgb(255, 255, 255, 0.5);
+  --tile2Color: rgb(255, 255, 255, 0.7);
+  --white: #ffffff;
+  --black: #000000;
+  --rgbWhite: rgb(255, 255, 255, 0.7);
+  --rgbBlack: rgb(0, 0, 0, 0.7);
+  --aquaBlue: #05c3dd;
+  --boxShadow: rgb(0, 0, 0, 0.15);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(
+    --amaranth
+  ); /* for browsers that don't support linear-gradient */
+  background-image: linear-gradient(
+    90deg,
+    var(--hunterBlaze),
+    var(--dullYellow)
+  );
+  background-size: cover;
+  overflow: hidden;
+}
+
+.bigTile {
+  display: flex;
+  margin: 2.1875rem auto 0rem auto;
+  width: 80vw;
+  z-index: 0;
+}
+.winner-Text1, .winner-Text2 {
+  font-size: 50px;
+  color: var(--hunterBlaze);
+}
+.tile1,
+.tile2 {
+  width: 40vw;
+  height: 90vh;
+  transition: 0.8s;
+  background-color: var(--tile1Color);
+}
+
+.tile1 {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.625rem 0rem 0rem 0.625rem;
+  align-items: center;
+}
+
+.tile2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0rem 0.625rem 0.625rem 0rem;
+}
+
+.tileColor {
+  background-color: var(--tileColor);
+}
+
+.playerType1 > h3,
+.playerType2 > h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.125rem;
+  word-spacing: 0.625rem;
+  padding: 6.25rem 0rem 0rem 0rem;
+}
+
+.divScore1 > span,
+.divScore2 > span {
+  font-weight: 400;
+  font-size: 4.375rem;
+  color: var(--rgbBlack);
+}
+
+.currentContainer,
+.currentContainer2 {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--hunterBlaze);
+  width: 13.75rem;
+  height: 7.5rem;
+  border-radius: 0.625rem;
+  margin: 8.125rem 0rem 0rem 0rem;
+  align-items: center;
+}
+
+.currentWord > p,
+.currentWord2 > p {
+  font-weight: 200;
+  font-size: 1.25rem;
+  color: var(--white);
+  padding: 1.25rem 0rem 0.9375rem 0rem;
+}
+
+.currentNumber > span,
+.currentNumber2 > span {
+  font-weight: 400;
+  font-size: 1.875rem;
+  color: var(--white);
+}
+
+.classNewGameButton {
+  display: flex;
+  flex-direction: column;
+}
+
+.newGameButton {
+  position: absolute;
+  left: 43%;
+  width: 12.5rem;
+  height: 3.125rem;
+  border: none;
+  border-radius: 6.25rem;
+  cursor: pointer;
+  margin: 3.125rem 0rem 0rem 0rem;
+  background-color: var(--rgbWhite);
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  box-shadow: 0rem 0rem 0.9375rem 0rem var(--boxShadow);
+  transition: all linear 0.3s;
+}
+
+.newGameButton:active {
+  transform: translateY(0.1875rem);
+}
+
+.rollDiceButton {
+  position: absolute;
+  top: 6.25rem;
+  margin: 20rem 0rem 0rem 0rem;
+}
+
+.holdButton {
+  position: absolute;
+  top: 12.5rem;
+  margin: 18.125rem 0rem 0rem 0rem;
+  width: 9.375rem;
+  left: 44.5%;
+}
+
+.dice {
+  display: none;
+}
+
+.diceDisplay {
+  display: block;
+}
+
+.dicey1,
+.dicey2,
+.dicey3,
+.dicey4,
+.dicey5,
+.dicey6 {
+  position: absolute;
+  top: 35%;
+  left: 47.5%;
+  width: 70px;
+  height: 70px;
+  border-radius: 0.625rem;
+  animation-name: diceRotate;
+  animation-duration: 3s;
+  animation-delay: 0s;
+}
+
+@keyframes diceRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  75% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.winner {
+  background-color: var(--rgbBlack);
+}

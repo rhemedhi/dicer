@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dicer</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <!--remember to do this favicon-->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="pageContainer">
+      <div class="bigTile">
+        <!-- player one section -->
+
+        <div class="tile1" id="firstTile">
+          <h3 class="winner-Text1"></h3>
+          <div class="playerType1">
+            <h3 class="actualPlayerName1">PLAYER 1</h3>
+          </div>
+          <div class="divScore1">
+            <span class="actualScore1">0</span>
+          </div>
+          <div class="divCurrentScore1">
+            <div class="currentContainer">
+              <div class="currentWord">
+                <p class="actualCurrentWord">CURRENT</p>
+              </div>
+              <div class="currentNumber">
+                <span class="actualCurrentNumber1">0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- player two section -->
+
+        <div class="tile2 tileColor" id="secondTile">
+          <h3 class="winner-Text2"></h3>
+          <div class="playerType2">
+            <h3 class="actualPlayerName2">PLAYER 2</h3>
+          </div>
+          <div class="divScore2">
+            <span class="actualScore2">0</span>
+          </div>
+          <div class="divCurrentScore2">
+            <div class="currentContainer2">
+              <div class="currentWord2">
+                <p class="actualCurrentWord2">CURRENT</p>
+              </div>
+              <div class="currentNumber2">
+                <span class="actualCurrentNumber2">0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- new game button -->
+        <div class="classNewGameButton">
+          <button class="newGameButton actualNewGame">🔄 New game</button>
+          <button class="newGameButton rollDiceButton">🎲 Roll dice</button>
+          <button class="newGameButton holdButton">📥 Hold</button>
+        </div>
+
+        <!-- dices 1 to 6  -->
+        <div class="dices">
+          <img src="Images/dice-1.png" alt="dice1" class="dicey1 dice" />
+          <img src="Images/dice-2.png" alt="dice2" class="dicey2 dice" />
+          <img src="Images/dice-3.png" alt="dice3" class="dicey3 dice" />
+          <img src="Images/dice-4.png" alt="dice4" class="dicey4 dice" />
+          <img src="Images/dice-5.png" alt="dice5" class="dicey5 dice" />
+          <img src="Images/dice-6.png" alt="dice6" class="dicey6 dice" />
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
