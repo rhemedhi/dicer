@@ -3,6 +3,7 @@ const playGame = () => {
   const newGame = document.querySelector('.actualNewGame');
   const rollDice = document.querySelector('.rollDiceButton');
   const holdButton = document.querySelector('.holdButton');
+  const dice = document.querySelectorAll('.dice');
   const dice1 = document.querySelector('.dicey1');
   const dice2 = document.querySelector('.dicey2');
   const dice3 = document.querySelector('.dicey3');
@@ -28,6 +29,8 @@ const playGame = () => {
     playerOneScore.textContent = 0;
     player2CurrentScore.textContent = 0;
     playerTwoScore.textContent = 0;
+    player1Cur = 0;
+    player2Cur = 0;
     tile1.classList.remove('winner');
     tile2.classList.remove('winner');
     tile1.classList.remove('tileColor');
@@ -35,7 +38,12 @@ const playGame = () => {
     winner_text1.textContent = '';
     winner_text2.textContent = '';
     playing = true;
+    currentPlayer = 1;
+    for (let i = 0; i < dice.length; i++) {
+      dice[i].classList.remove('diceDisplay');
+    }
   };
+
   // When the new game button is clicked
   newGame.addEventListener('click', initializeGame);
 
