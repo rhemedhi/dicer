@@ -131,12 +131,12 @@ const playGame = () => {
 
   // Winner of the game function
   const winner = () => {
-    if (playerOneScore.textContent >= 20) {
+    if (playerOneScore.textContent >= 100) {
       tile1.classList.add('winner');
       tile2.classList.add('tileColor');
       winner_text1.textContent = 'winner';
       playing = false;
-    } else if (playerTwoScore.textContent >= 20) {
+    } else if (playerTwoScore.textContent >= 100) {
       tile2.classList.add('winner');
       tile1.classList.add('tileColor');
       winner_text2.textContent = 'winner';
