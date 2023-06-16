@@ -207,6 +207,12 @@ body {
   background-color: var(--rgbBlack);
 }
 
+.alertMessage {
+  display: none;
+}
+
+/* media queries for the game coming soon */
+
 @media screen and (max-width: 1024px) {
   .newGameButton {
     width: 9rem;
@@ -219,5 +225,11 @@ body {
 @media screen and (max-width: 1000px) {
   .bigTile {
     display: none;
+  }
+  .alertMessage {
+    display: block;
+    margin: 300px auto 0px auto;
+    width: 70vw;
+    font-size: clamp(10px, 10vw, 48px);
   }
 }

@@ -151,5 +151,14 @@ const playGame = () => {
       playing = false;
     }
   };
+
+  // alert users to play on their laptop when they load the game
+    window.onload = function tellUsersToReferToLaptop () {
+      const widthOfPage = window.innerWidth;
+      if (widthOfPage <= 1000) {
+        alert('Kindly play on your laptop for now.');
+      }
+    }
+    
 };
 playGame();
