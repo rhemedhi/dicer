@@ -206,3 +206,18 @@ body {
 .winner {
   background-color: var(--rgbBlack);
 }
+
+@media screen and (max-width: 1024px) {
+  .newGameButton {
+    width: 9rem;
+    font-size: 1rem;
+  }
+  .holdButton {
+    width: 7rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .bigTile {
+    display: none;
+  }
+}
